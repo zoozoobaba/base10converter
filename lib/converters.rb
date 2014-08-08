@@ -13,17 +13,11 @@ class Converter
     @converted_array
   end
 
-  def convert_to_dec
+  def convert_to_bin
     converted_array << @number % 2
     while @number > 1 do
       converted_array << (@number = number / 2) % 2
     end
     @converted_array.reverse!.join("").to_i
   end
-
-
 end
-
-# new_conversion = Converter.new(6)
-# new_conversion.convert_to_dec
-# p new_conversion.converted_array
